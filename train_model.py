@@ -33,5 +33,6 @@ model.fit(X_train, y_train)
 os.makedirs("model", exist_ok=True)
 
 print("Saving model now...")
-joblib.dump(model, "model/house_price_model.pkl")
+joblib.dump(model, "house_price_model.pkl")
 print("Model saved successfully!")
+
