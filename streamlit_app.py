@@ -6,7 +6,7 @@ import joblib
 st.title("🏡 House Price Prediction App")
 
 # Load model
-model = joblib.load("model/house_price_model.pkl")
+model = joblib.load("house_price_model.pkl")
 
 st.write("Enter the house features below:")
 
@@ -27,3 +27,4 @@ input_data = np.array([[longitude, latitude, housing_median_age,
 if st.button("Predict Price"):
     prediction = model.predict(input_data)[0]
     st.success(f"Estimated House Price: ${prediction:,.2f}")
+
